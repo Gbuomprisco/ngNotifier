@@ -1,0 +1,35 @@
+=notification-variation ($background, $border, $color)
+    background: $background
+    border-color: $border
+    color: $color
+    box-shadow: 0 0 4px 0 $border
+
+.notification
+    display: none
+    border-radius: 3px
+    width: 300px
+    border: 1px solid transparent
+    padding: 15px
+    position: fixed
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-size: 13px
+    .notification__close
+        position: absolute
+        top: 2px
+        right: 10px
+        cursor: pointer
+        font-size: 15px
+        font-weight: 700
+        line-height: 1
+        text-shadow: 0 1px 0 #fff
+    &.notification-default
+        +notification-variation(#fff, darken(#fff, 10%), #444)
+    &.notification-success
+        +notification-variation(#72cd2a, darken(#72cd2a, 10%), #fff)
+    &.notification-error
+        +notification-variation(#ff4424, darken(#ff4424, 10%), #fff)
+    &.notification-info
+        +notification-variation(steelblue, darken(steelblue, 10%), #fff)
+    .notification__content
+        word-wrap: break-word
+        font-weight: bold

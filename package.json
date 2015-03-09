@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "author": "",
+  "dependencies": {
+    "bower": "latest",
+    "grunt": "latest",
+    "http-server": "latest",
+    "karma": "latest",
+    "jasmine": "latest"
+  },
+  "scripts": {
+    "postinstall": "node_modules/.bin/bower install"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.2.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-sass": "latest"
+  }
+}
