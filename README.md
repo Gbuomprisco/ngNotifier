@@ -5,9 +5,9 @@ A AngularJS module to create notifications
 ## Usage
 ### ngNotifier directive
 
-A ngNotifier directive looks like this:
+A basic ngNotifier directive looks like this:
 
-    <notification>My notificatiom</notification>
+    <notification>My notification</notification>
 
 You can customize it, though, with some attributes:
 
@@ -28,14 +28,13 @@ This is the list of attributes you can use:
 It's possible to use ngNotifier programmatically by using its factory ngNotifierFactory
 
     var appController = ["$scope", "ngNotifierFactory", function ($scope, ngNotifierFactory) {
-            ngNotifierFactory.notify("Hey, this is a new notification", {
-                type: "error",
-                duration: 5000,
-                templateUrl: templateUrl
-            }, $scope);
-    }
+        ngNotifierFactory.notify("Hey, this is a new notification", {
+            type: "error",
+            duration: 5000
+        }, $scope);
+    }];
 
-    angular.module('app', [])
+    angular.module('app', ['ngNotifier'])
         .controller('appController', appController);
 
 
